@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-namespace Identity.Model
+namespace Identity.Domain.Entities
 {
     public abstract class Base
     {
