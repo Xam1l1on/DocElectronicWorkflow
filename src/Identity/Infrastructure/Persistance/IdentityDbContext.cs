@@ -3,17 +3,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DocumentPlatform.DocElectronicWorkflow.Identity.Infrastructure.Persistance
 {
-    public class IdentityDbContext : IdentityDbContext<IdentityUser>
+    public class IdentityDbContext : DbContext
     {
-        public IdentityDbContext(DbContextOptions<IdentityDbContext> options)
-            : base(options)
+        internal DbSet<IdentityUser> Users { get; init; }
+        public IdentityDbContext(DbContextOptions<IdentityDbContext> options) : base(options)
         {
+            
         }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
-            // Additional configuration for identity entities can be added here.
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(IdentityDbContext).Assembly);
         }
     }
 }
