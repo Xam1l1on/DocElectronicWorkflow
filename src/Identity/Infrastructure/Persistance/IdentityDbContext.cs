@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace DocumentPlatform.DocElectronicWorkflow.Identity.Infrastructure.Persistance
+namespace Identity.Infrastructure.Persistance
 {
     public class IdentityDbContext : DbContext
     {
@@ -15,6 +15,7 @@ namespace DocumentPlatform.DocElectronicWorkflow.Identity.Infrastructure.Persist
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(IdentityDbContext).Assembly);
+            
         }
     }
 }

@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 namespace Identity.Domain.Entities
 {
     public abstract class Base

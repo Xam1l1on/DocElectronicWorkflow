@@ -1,5 +1,3 @@
-using System;
-
 namespace Identity.Domain.ValueObjects
 {
     public sealed class Email : IEquatable<Email>
