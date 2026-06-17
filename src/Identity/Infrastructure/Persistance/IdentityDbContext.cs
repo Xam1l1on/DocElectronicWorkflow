@@ -1,11 +1,12 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+
+using Identity.Domain.Entities;
 
 namespace Identity.Infrastructure.Persistance
 {
     public class IdentityDbContext : DbContext
     {
-        internal DbSet<IdentityUser> Users { get; init; }
+        public DbSet<User> Users { get; set; }
         public IdentityDbContext(DbContextOptions<IdentityDbContext> options) : base(options)
         {
             
