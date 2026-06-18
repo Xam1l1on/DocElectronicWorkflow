@@ -2,5 +2,4 @@
   <Folder Name="/src/">
     <Project Path="src/Identity/Identity.csproj" />
   </Folder>
-  <Folder Name="/src/Services/" />
 </Solution>
